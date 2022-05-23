@@ -10,7 +10,7 @@
 
 body{
 
-    background: linear-gradient(330deg, #3611fa, #e3c7e0) no-repeat;
+    background: linear-gradient(330deg, #ff6600, #5f26009a) no-repeat;
 
     margin-left: 13px;
     margin-right: 13px;
@@ -71,8 +71,13 @@ body{
 }
 
 .header .container-header .container-nav-menu .search{
-    width: 100%;
     min-width: 100px;
+    margin-right: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 
 input{
@@ -80,10 +85,8 @@ input{
     border: #980F30 solid 2px;
     color:black;
     height: 48px;
-    width: 575px;
     min-width: 100px;
     font-size: 30px;
-    
 }
 
 .line-top{
@@ -95,7 +98,6 @@ input{
 section{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: nowrap;
     justify-content: space-around;
     max-width: 100vw;
@@ -129,6 +131,13 @@ section h3{
 }
 
 article .imgs .big-img{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+article .imgs .big-img .big-img1{
     border: #980F30 solid 2px;
     margin:13px;
     min-width: 396px;
@@ -139,7 +148,7 @@ article .imgs .big-img{
     overflow: hidden;
 }
 
-article .imgs .big-img img{
+article .imgs .big-img .big-img1 img{
     width: 100%;
     height: 100%;
 }
@@ -181,10 +190,11 @@ article .imgs .small-img2 img{
 footer{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     margin-top: 13px;
+    margin-bottom: 13px;
     max-width: 1440px;
     width: 100%;
 }
@@ -192,11 +202,10 @@ footer{
 footer .social-network{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    justify-self:flex-start;
-    flex-wrap: nowrap;
     justify-content: space-between;
-    min-width: 513px;
+    margin-right: 13px;
+    margin-bottom: 13px;
+    width: 100%;
 }
 
 footer .insta, .linkedin, .github{
@@ -258,5 +267,60 @@ footer .contact{
 
     to{
         background-position: 100% 50%;
+    }
+}
+
+@media (max-width: 1040px){
+    section article{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 446px 1fr;
+        grid-template-areas: "imgs"
+		                     "text";
+        width: 100%;
+    }
+
+    section article .imgs{
+        grid-area: imgs;
+        margin-top: 200px;
+    }
+
+    section article .imgs .big-img{
+        justify-content: center;
+    }
+
+    article .imgs .small-img{
+        justify-content: center;
+    }
+
+    section article .text{
+        grid-area: text;
+        margin-top: 200px;
+    }
+
+}
+
+@media (max-width: 560px){
+    input{
+        display: none;
+    }
+
+    article .imgs .big-img .big-img1{
+        min-width: 50px;
+        min-height: 50px;
+    }
+
+    article .imgs .small-img1 , .small-img2{
+        min-width: 50px;
+        min-height: 50px;
+    }
+
+    section h1{
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    footer{
+        flex-wrap: wrap;
     }
 }
