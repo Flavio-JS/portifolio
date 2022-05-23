@@ -270,7 +270,7 @@ footer .contact{
     }
 }
 
-@media (max-width: 1040px){
+@media (min-width: 561px) and (max-width: 1040px){
     section article{
         display:grid;
         grid-template-columns: 100%;
