@@ -17,7 +17,6 @@ body{
     min-height: 100vh;
     height: 100%;
     font-family: 'Inter', sans-serif;
-    
     color: rgb(0, 0, 0);
 }
 
@@ -270,7 +269,7 @@ footer .contact{
     }
 }
 
-@media (min-width: 561px) and (max-width: 1040px){
+@media (max-width: 1040px){
     section article{
         display:grid;
         grid-template-columns: 100%;
